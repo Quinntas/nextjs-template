@@ -6,6 +6,8 @@
 .pnp.js
 .yarn/install-state.gz
 
+.idea
+
 .env
 /public/robots.txt
 /public/sitemap.xml

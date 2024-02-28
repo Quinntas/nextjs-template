@@ -1,10 +1,11 @@
+"use client"
+
 import {useSearchParams} from "react-router-dom";
 
 export type QueryStateParams = Record<string, string>;
 
 interface UseQueryStateProps<T extends QueryStateParams> {
     defaults: Partial<T>;
-    data: T;
 }
 
 export function useQueryState<T extends QueryStateParams>(props: UseQueryStateProps<T>) {
@@ -12,13 +13,16 @@ export function useQueryState<T extends QueryStateParams>(props: UseQueryStatePr
         props.defaults as QueryStateParams
     )
 
-    function setQueryState(data: Partial<T>) {
-        const newParams = {...searchParams, ...data};
-        setSearchParams(newParams, {replace: true});
+    function getQueryState(key: string) {
+        return searchParams.get(key)
+    }
+
+    function setQueryState(data: Partial<T>, replace: boolean = true) {
+        setSearchParams({...searchParams, ...data}, {replace});
     }
 
     return {
-        searchParams,
+        getQueryState,
         setQueryState
     }
 }
