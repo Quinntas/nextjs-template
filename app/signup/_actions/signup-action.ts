@@ -1,7 +1,7 @@
 "use server"
 
 import {z} from "zod";
-import {signupSchema} from "@/lib/types/zod/signup-schema";
+import {signupSchema} from "@/app/signup/_components/signup-schema";
 import {Argon2id} from "oslo/password";
 import {cookies} from "next/headers";
 import {db} from "@/lib/database/lucia-drizzle-adapter";

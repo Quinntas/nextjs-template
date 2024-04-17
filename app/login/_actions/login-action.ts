@@ -1,7 +1,7 @@
 "use server"
 
 import {z} from "zod";
-import {loginSchema} from "@/lib/types/zod/login-schema";
+import {loginSchema} from "@/app/login/_components/login-schema";
 import {eq} from "drizzle-orm";
 import {cookies} from "next/headers";
 import {db} from "@/lib/database/lucia-drizzle-adapter";

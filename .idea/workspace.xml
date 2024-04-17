@@ -6,17 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/auth-provider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/prismaClient.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/_actions/login-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_actions/login-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/_components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_components/login-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_actions/signup-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_components/signup-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_components/signup-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/hooks/useLocalStorage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hooks/use-local-storage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/hooks/useQueryState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hooks/use-query-state.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/types/zod/login-schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_components/login-schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/types/zod/signup-schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_components/signup-schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +30,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Quinntas"
+  }
+}]]></component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Quinntas/nextjs-template.git",
+    "accountId": "29d7a21c-344c-4d70-806d-a4c13db33633"
+  }
+}]]></component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="k0k7qvb7" />
   </component>
@@ -87,9 +100,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\quintas\Documents\Gitpica\nextjs-template\app\signup\_components" />
+      <recent name="C:\Users\quintas\Documents\Gitpica\nextjs-template\app\login\_components" />
       <recent name="C:\Users\quintas\Documents\Gitpica\nextjs-template\lib\providers" />
       <recent name="C:\Users\quintas\Documents\Gitpica\nextjs-template\@types" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +123,10 @@
       <updated>1709139797404</updated>
       <workItem from="1709139800544" duration="4964000" />
       <workItem from="1709144986456" duration="5000" />
-      <workItem from="1710696199565" duration="1389000" />
+      <workItem from="1710696199565" duration="1527000" />
+      <workItem from="1710791388194" duration="10000" />
+      <workItem from="1712264119324" duration="12000" />
+      <workItem from="1713362644581" duration="370000" />
     </task>
     <servers />
   </component>

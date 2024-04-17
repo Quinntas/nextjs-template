@@ -8,7 +8,7 @@ import {useForm} from "react-hook-form";
 import {z} from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {toast} from "sonner";
-import {loginSchema} from "@/lib/types/zod/login-schema";
+import {loginSchema} from "@/app/login/_components/login-schema";
 import {login} from "@/app/login/_actions/login-action";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import Link from "next/link";

@@ -3,7 +3,7 @@
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
-import {signupSchema} from "@/lib/types/zod/signup-schema";
+import {signupSchema} from "@/app/signup/_components/signup-schema";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
 import {z} from "zod";
