@@ -1,12 +1,12 @@
-import {Lucia} from "lucia";
-import {adapter} from "@/lib/database/lucia-drizzle-adapter";
+import {Lucia} from 'lucia';
+import {luciaAdapter} from '@/lib/database/lucia-drizzle-adapter';
 
-export const lucia = new Lucia(adapter, {
+export const lucia = new Lucia(luciaAdapter, {
     sessionCookie: {
         expires: false,
         attributes: {
-            secure: process.env.NODE_ENV === "production"
-        }
+            secure: process.env.NODE_ENV === 'production',
+        },
     },
     getUserAttributes: (attributes) => {
         return {
@@ -14,12 +14,12 @@ export const lucia = new Lucia(adapter, {
             email: attributes.email,
             avatar: attributes.avatar,
             created_at: attributes.created_at,
-            updated_at: attributes.updated_at
+            updated_at: attributes.updated_at,
         };
-    }
+    },
 });
 
-declare module "lucia" {
+declare module 'lucia' {
     interface Register {
         Lucia: typeof lucia;
         DatabaseUserAttributes: DatabaseUserAttributes;
