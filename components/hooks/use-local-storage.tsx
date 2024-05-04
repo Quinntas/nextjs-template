@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect, useState} from 'react';
+import {useLocalStorage as useLocalStoragaHook} from 'usehooks-ts';
 
 interface UseLocalStorageProps<T extends object> {
     default: T;
@@ -8,28 +8,14 @@ interface UseLocalStorageProps<T extends object> {
 }
 
 export function useLocalStorage<T extends object>(props: UseLocalStorageProps<T>) {
-    const [item, setItem] = useState<T>();
-
-    useEffect(() => {
-        const lsItem = localStorage.getItem(props.key);
-
-        if (!lsItem) {
-            localStorage.setItem(props.key, JSON.stringify(props.default));
-            setItem(props.default);
-            return;
-        }
-
-        setItem(JSON.parse(lsItem!) as T);
-    }, []);
+    const [item, setItem] = useLocalStoragaHook<T>(props.key, props.default);
 
     function updateItem(data: Partial<T>) {
-        const newItem = {...item, ...data};
-        setItem(newItem as T);
-        localStorage.setItem(props.key, JSON.stringify(item));
+        setItem({...item, ...data});
     }
 
     return {
-        item,
+        item: item!,
         updateItem,
     };
 }
