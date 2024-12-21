@@ -38,25 +38,24 @@ export default function RootLayout({
 }>) {
     return (
         <ClerkProvider dynamic>
-            <html lang="en">
+            <html lang="en" suppressHydrationWarning>
             <body
-                suppressHydrationWarning
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-            <ThemeProvider
-                attribute="class"
-                defaultTheme="dark"
-                enableSystem
-                disableTransitionOnChange
-            >
-                <NuqsAdapter>
+            <NuqsAdapter>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem
+                    disableTransitionOnChange
+                >
                     <TooltipProvider>
                         {children}
                     </TooltipProvider>
-                </NuqsAdapter>
-                <Toaster/>
-                <TailwindIndicator/>
-            </ThemeProvider>
+                    <Toaster/>
+                    <TailwindIndicator/>
+                </ThemeProvider>
+            </NuqsAdapter>
             </body>
             </html>
         </ClerkProvider>
