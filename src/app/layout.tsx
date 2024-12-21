@@ -4,6 +4,9 @@ import "./globals.css";
 import {ThemeProvider} from "@/components/providers/theme-provider";
 import {Toaster} from "@/components/ui/sonner";
 import {ClerkProvider} from "@clerk/nextjs";
+import {NuqsAdapter} from "nuqs/adapters/next/app";
+import {TooltipProvider} from "@/components/ui/tooltip";
+import {TailwindIndicator} from "@/components/tailwind-indicator";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -35,8 +38,9 @@ export default function RootLayout({
 }>) {
     return (
         <ClerkProvider dynamic>
-            <html lang="en" suppressHydrationWarning>
+            <html lang="en">
             <body
+                suppressHydrationWarning
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
             <ThemeProvider
@@ -45,8 +49,13 @@ export default function RootLayout({
                 enableSystem
                 disableTransitionOnChange
             >
-                {children}
+                <NuqsAdapter>
+                    <TooltipProvider>
+                        {children}
+                    </TooltipProvider>
+                </NuqsAdapter>
                 <Toaster/>
+                <TailwindIndicator/>
             </ThemeProvider>
             </body>
             </html>
