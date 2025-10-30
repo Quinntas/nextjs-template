@@ -1,16 +1,8 @@
-import type {NextConfig} from "next";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    reactStrictMode: true,
-    images: {
-        domains: [],
-    },
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
-    typescript: {
-        ignoreBuildErrors: true,
-    },
+  devIndicators: false,
+  reactCompiler: true,
 };
 
 export default nextConfig;
